@@ -38,7 +38,7 @@ This problem is solved by attaching the segue to the view controller rather than
 
 #### Potential Problem: Storyboards don’t allow for injection upon instantiation of a view controller
 
-To see a full discussion on this issue, please see: [Storyboards and Dependency Injections](https://docs.google.com/document/d/1a_mNjV0axW8FP2SvLQtMs4tETLplCMJo0AjKiOyNAQ8/edit#heading=h.m4km1cnhc54p).
+To see a full discussion on this issue, please see: Storyboards and Dependency Injections.
 While there is no direct solution to this problem with storyboards, the best workaround is to create your own injection method that an instantiator calls to pass objects to your view controller. This will allow you to use implicitly unwrapped optionals for properties that are necessary for your view controller while providing an interface with which a presenting view controller can interact. While having implicitly unwrapped optional properties is still not as pure as having non-optional properties on the view controller, combining them with an injection method will insure that necessary properties are assigned before use. If an attempt to present the controller occurs without calling the injection method, the developer will know on their first run after implementation because the app will crash when the screen is presented.  The following example code shows how such an injection method should be set up.
 
 ```swift
