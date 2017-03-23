@@ -34,7 +34,7 @@ The easiest way to ensure that your storyboard IDs used in code are compile time
 
 #### Potential Problem: Segues are not flexible enough. What if I want to use one segue that originates from two different UI elements?
 
-This problem is solved by attaching the segue to the view controller rather than specific UI elements. Then, you can call performSegue(withIdentifier: sender:) from anywhere in the view controller to perform the segue. This makes segues very flexible and easy to use. 
+This problem is solved by attaching the segue to the view controller rather than specific UI elements. Then, you can call `performSegue(withIdentifier: sender:)` from anywhere in the view controller to perform the segue. This makes segues very flexible and easy to use. 
 
 #### Potential Problem: Storyboards don’t allow for injection upon instantiation of a view controller
 
